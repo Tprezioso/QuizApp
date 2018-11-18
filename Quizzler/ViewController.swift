@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ViewController: UIViewController {
     
@@ -45,8 +46,8 @@ class ViewController: UIViewController {
     
     func updateUI() {
         scoreLabel.text = "Score: \(score)"
-        progressLabel.text = "\(questionNumber) / \(allQuestions.list.count - 1)"
-        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionNumber)
+        progressLabel.text = "\(questionNumber + 1) / \(allQuestions.list.count )"
+        progressBar.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count - 1)) * CGFloat(questionNumber)
     }
     
 
@@ -73,17 +74,17 @@ class ViewController: UIViewController {
         let correctAnswer = allQuestions.list[questionNumber].answer
         
         if correctAnswer == pickedAnswer {
+            ProgressHUD.showSuccess("Correct")
             score += 1
-            print("corret!")
         } else {
-            print("wrong!")
+            ProgressHUD.showError("Wrong!")
         }
     
     }
     
     func startOver() {
-        questionNumber = 0
         score = 0
+        questionNumber = 0
         nextQuestion()
     }
     

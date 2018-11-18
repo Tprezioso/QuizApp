@@ -14,6 +14,7 @@
 		9F91FBF1219E25EE00CDED4B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F91FBF0219E25EE00CDED4B /* Question.swift */; };
 		9F91FBF3219E301E00CDED4B /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F91FBF2219E301E00CDED4B /* QuestionBank.swift */; };
 		ADEB04ED1FBDFEAA00026359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633646C21B8C657400FF45E2 /* Main.storyboard */; };
+		DE6A64CCAC0A4124C24D0A28 /* Pods_Quizzler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE4CA9604C4A4CC8C4A6481 /* Pods_Quizzler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,12 @@
 		633646C31B8C657400FF45E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		633646C51B8C657400FF45E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		633646C81B8C657400FF45E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		93902D62E0D22BDD8DA4DF4B /* Pods-Quizzler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizzler.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quizzler/Pods-Quizzler.release.xcconfig"; sourceTree = "<group>"; };
+		9F064E4021A0EA4000297A38 /* Quizzler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quizzler-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F91FBF0219E25EE00CDED4B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9F91FBF2219E301E00CDED4B /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		BEE4CA9604C4A4CC8C4A6481 /* Pods_Quizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2D3F515617540A2B0774BE /* Pods-Quizzler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizzler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quizzler/Pods-Quizzler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6A64CCAC0A4124C24D0A28 /* Pods_Quizzler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4959882EA0629B3D622001E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB2D3F515617540A2B0774BE /* Pods-Quizzler.debug.xcconfig */,
+				93902D62E0D22BDD8DA4DF4B /* Pods-Quizzler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		577AD37261FFD60ADC839C4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEE4CA9604C4A4CC8C4A6481 /* Pods_Quizzler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		633646B01B8C657400FF45E2 = {
 			isa = PBXGroup;
 			children = (
 				633646BB1B8C657400FF45E2 /* Quizzler */,
 				633646BA1B8C657400FF45E2 /* Products */,
+				4959882EA0629B3D622001E1 /* Pods */,
+				577AD37261FFD60ADC839C4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,7 @@
 			children = (
 				633646C71B8C657400FF45E2 /* LaunchScreen.xib */,
 				633646BD1B8C657400FF45E2 /* Info.plist */,
+				9F064E4021A0EA4000297A38 /* Quizzler-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -109,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 633646D81B8C657400FF45E2 /* Build configuration list for PBXNativeTarget "Quizzler" */;
 			buildPhases = (
+				E1E5BBB62455D5A702361089 /* [CP] Check Pods Manifest.lock */,
 				633646B51B8C657400FF45E2 /* Sources */,
 				633646B61B8C657400FF45E2 /* Frameworks */,
 				633646B71B8C657400FF45E2 /* Resources */,
+				B8E1CAB59226E5EC4F93C7EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +197,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B8E1CAB59226E5EC4F93C7EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Quizzler/Pods-Quizzler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quizzler/Pods-Quizzler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1E5BBB62455D5A702361089 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quizzler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		633646B51B8C657400FF45E2 /* Sources */ = {
@@ -309,6 +376,7 @@
 		};
 		633646D91B8C657400FF45E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2D3F515617540A2B0774BE /* Pods-Quizzler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -327,6 +395,7 @@
 		};
 		633646DA1B8C657400FF45E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93902D62E0D22BDD8DA4DF4B /* Pods-Quizzler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
